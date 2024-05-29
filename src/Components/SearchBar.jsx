@@ -1,34 +1,9 @@
 import CountryList from './CountryList';
 import { useState } from 'react';
-
-const test = [
-  {
-    flag: '📈',
-    country: 'Portugal',
-  },
-  {
-    flag: '🐶',
-    country: 'Panama',
-  },
-  {
-    flag: '💀',
-    country: 'Porto Rico',
-  },
-  {
-    flag: '🐐',
-    country: 'Peru',
-  },
-  {
-    flag: '🐧',
-    country: 'Oslo',
-  },
-];
+import countries from '../assets/countryList.json';
 
 const SearchBar = () => {
-  let [countries] = useState(test);
   let [inputText, setInputText] = useState('');
-
-  let regex = new RegExp(inputText, 'gi');
 
   return (
     <section>
@@ -53,17 +28,19 @@ const SearchBar = () => {
           Submit
         </button>
       </form>
-      <section className="rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50 ">
+      <section className="rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
         {inputText &&
-          countries.map((country, index) =>
-            country.country.match(regex) ? (
+          countries
+            .filter((country) =>
+              country.name.toLowerCase().includes(inputText.toLowerCase())
+            )
+            .map((country, index) => (
               <CountryList
                 key={index}
                 flag={country.flag}
-                country={country.country}
+                country={country.name}
               />
-            ) : null
-          )}
+            ))}
       </section>
     </section>
   );
