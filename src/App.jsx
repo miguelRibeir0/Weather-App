@@ -1,19 +1,22 @@
 import './index.css';
-import SearchBar from './Components/SearchBar';
+import { createRoot } from 'react-dom/client';
+import Landing from './Landing.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Details from './Details.jsx';
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   return (
-    <>
-      <section className="relative  min-h-half w-dvw">
-        <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-9xl">
-          🌦️
-        </h1>
-      </section>
-      <section className=" min-h-1/2 m-auto flex w-fit items-center justify-center overflow-x-hidden">
-        <SearchBar></SearchBar>
-      </section>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/details" element={<Details />} />
+        <Route path="/" element={<Landing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(<App />);
