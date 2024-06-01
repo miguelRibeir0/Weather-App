@@ -1,10 +1,14 @@
 import CountryList from './CountryList';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import countries from '../assets/countryList.json';
 
 const SearchBar = () => {
   let [inputText, setInputText] = useState('');
+  let onClick = (country) => {
+    setInputText(country);
+  };
+  const navigate = useNavigate();
 
   return (
     <section>
@@ -21,14 +25,16 @@ const SearchBar = () => {
             }
           }}
         />
-        <Link to={'/details'}>
-          <button
-            type="submit"
-            className="rounded-lg bg-blue-500 p-2 text-white transition duration-300 ease-in-out hover:bg-blue-400  "
-          >
-            Submit
-          </button>
-        </Link>
+
+        <button
+          type="submit"
+          className="rounded-lg bg-blue-500 p-2 text-white transition duration-300 ease-in-out hover:bg-blue-400  "
+          onClick={() =>
+            navigate('/weatherDetails', { state: { country: inputText } })
+          }
+        >
+          Submit
+        </button>
       </form>
       <section className=" max-h-96 w-72 overflow-y-auto rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
         {inputText &&
@@ -41,6 +47,7 @@ const SearchBar = () => {
                 key={index}
                 flag={country.flag}
                 country={country.name}
+                onClick={onClick}
               />
             ))}
       </section>

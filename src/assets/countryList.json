@@ -82,14 +82,6 @@
   { "name": "French Guiana", "code": "GF", "flag": "🇬🇫" },
   { "name": "French Polynesia", "code": "PF", "flag": "🇵🇫" },
   { "name": "French Southern Territories", "code": "TF", "flag": "🇹🇫" },
-  { "name": "Falkland Islands (Malvinas)", "code": "FK", "flag": "🇫🇰" },
-  { "name": "Faroe Islands", "code": "FO", "flag": "🇫🇴" },
-  { "name": "Fiji", "code": "FJ", "flag": "🇫🇯" },
-  { "name": "Finland", "code": "FI", "flag": "🇫🇮" },
-  { "name": "France", "code": "FR", "flag": "🇫🇷" },
-  { "name": "French Guiana", "code": "GF", "flag": "🇬🇫" },
-  { "name": "French Polynesia", "code": "PF", "flag": "🇵🇫" },
-  { "name": "French Southern Territories", "code": "TF", "flag": "🇹🇫" },
   { "name": "Gabon", "code": "GA", "flag": "🇬🇦" },
   { "name": "Gambia", "code": "GM", "flag": "🇬🇲" },
   { "name": "Georgia", "code": "GE", "flag": "🇬🇪" },
@@ -274,6 +266,5 @@
   { "name": "Western Sahara", "code": "EH", "flag": "🇪🇭" },
   { "name": "Yemen", "code": "YE", "flag": "🇾🇪" },
   { "name": "Zambia", "code": "ZM", "flag": "🇿🇲" },
-  { "name": "Zimbabwe", "code": "ZW", "flag": "🇿🇼" },
-  { "name": "Åland Islands", "code": "AX", "flag": "🇦🇽" }
+  { "name": "Zimbabwe", "code": "ZW", "flag": "🇿🇼" }
 ]
