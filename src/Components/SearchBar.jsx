@@ -12,14 +12,14 @@ const SearchBar = () => {
 
   return (
     <section>
-      <form className="mb-3  flex w-full justify-center ">
+      <form className="mb-3 flex w-full justify-center">
         <input
           type="text"
           placeholder="Search..."
           className="mr-4 w-52 rounded-lg border-2 border-gray-300 p-2 transition duration-300 ease-in-out focus:border-blue-400 focus:outline-none focus:ring-0"
           value={inputText}
           onChange={(e) => {
-            const regex = /^[a-zA-Z]*$/;
+            const regex = /^[a-zA-Z\s]*$/;
             if (e.target.value === '' || regex.test(e.target.value)) {
               setInputText(e.target.value);
             }
@@ -28,7 +28,7 @@ const SearchBar = () => {
 
         <button
           type="submit"
-          className="rounded-lg bg-blue-500 p-2 text-white transition duration-300 ease-in-out hover:bg-blue-400  "
+          className="rounded-lg bg-blue-500 p-2 text-white transition duration-300 ease-in-out hover:bg-blue-400"
           onClick={() =>
             navigate('/weatherDetails', { state: { country: inputText } })
           }
@@ -36,7 +36,7 @@ const SearchBar = () => {
           Submit
         </button>
       </form>
-      <section className=" max-h-96 w-72 overflow-y-auto rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
+      <section className="max-h-96 w-72 overflow-y-auto rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
         {inputText &&
           countries
             .filter((country) =>
