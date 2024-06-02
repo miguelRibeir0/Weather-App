@@ -101,7 +101,7 @@
   { "name": "Guyana", "code": "GY", "flag": "🇬🇾" },
   { "name": "Haiti", "code": "HT", "flag": "🇭🇹" },
   { "name": "Heard Island and Mcdonald Islands", "code": "HM", "flag": "🇭🇲" },
-  { "name": "Holy See (Vatican City State)", "code": "VA", "flag": "🇻🇦" },
+  { "name": "Vatican City", "code": "VA", "flag": "🇻🇦" },
   { "name": "Honduras", "code": "HN", "flag": "🇭🇳" },
   { "name": "Hong Kong", "code": "HK", "flag": "🇭🇰" },
   { "name": "Hungary", "code": "HU", "flag": "🇭🇺" },
@@ -127,7 +127,6 @@
     "code": "KP",
     "flag": "🇰🇵"
   },
-  { "name": "Korea, Republic of", "code": "KR", "flag": "🇰🇷" },
   { "name": "Kuwait", "code": "KW", "flag": "🇰🇼" },
   { "name": "Kyrgyzstan", "code": "KG", "flag": "🇰🇬" },
   { "name": "Lao People's Democratic Republic", "code": "LA", "flag": "🇱🇦" },
