@@ -9,12 +9,12 @@ const CountryStats = ({
   speed,
 }) => {
   return (
-    <section className="m-auto flex h-full w-72 flex-col justify-center text-center lg:mt-20 lg:w-2/6 lg:justify-start">
+    <section className="m-auto flex w-72 flex-col justify-center text-center lg:mt-20 lg:w-2/6 lg:items-center lg:justify-start">
       <div>
-        <h1 className="rounded-t-lg border-2 border-white p-5 text-4xl font-bold uppercase text-white lg:text-8xl">
+        <h1 className="rounded-t-lg border-2 border-white p-5 text-4xl font-bold uppercase text-white lg:w-fit lg:text-8xl">
           {name}
         </h1>
-        <div className="flex items-center justify-around border-b-2 border-white p-5 lg:border-2 lg:border-t-0 lg:py-7">
+        <div className="flex w-full items-center justify-around border-b-2 border-white p-5 lg:border-2 lg:border-t-0 lg:py-7">
           <h3 className="text-3xl capitalize text-white lg:text-5xl">
             {description}
           </h3>

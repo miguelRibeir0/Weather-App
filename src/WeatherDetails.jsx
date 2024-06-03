@@ -27,7 +27,7 @@ const Details = () => {
       <div className="flex h-screen flex-col">
         <img
           src={homeLogo}
-          className="my-10 w-1/5 cursor-pointer self-center rounded-xl border-2 border-white p-5 hover:bg-white hover:bg-opacity-10 lg:w-24"
+          className="my-10 w-20 cursor-pointer self-center rounded-xl border-2 border-white p-5 hover:bg-white hover:bg-opacity-10 lg:w-24"
           onClick={() => navigate('/')}
         ></img>
         <CountryStats
@@ -39,7 +39,6 @@ const Details = () => {
           max={country?.main.temp_max}
           humidity={country?.main.humidity}
           speed={country?.wind.speed}
-          className="flex h-full flex-grow items-center justify-center"
         />
       </div>
     );
