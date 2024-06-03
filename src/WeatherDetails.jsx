@@ -3,6 +3,8 @@ import { useQuery } from '@tanstack/react-query';
 import fetchWeather from './countryFetch';
 import CountryStats from './Components/CountryStats';
 import CountryNotFound from './Components/CountryNotFound';
+import homeLogo from './assets/home.svg';
+import landing from './assets/landing.svg';
 
 const Details = () => {
   const navigate = useNavigate();
@@ -15,20 +17,19 @@ const Details = () => {
 
   if (isLoading) {
     return (
-      <div className="mr-3 h-5 w-5 animate-spin">
-        <h2 className="text-9xl">🌦️</h2>
+      <div className="fixed flex h-dvh w-dvw animate-spin items-center justify-center overflow-hidden">
+        <img src={landing} className="w-48 overflow-hidden" />
       </div>
     );
   }
   if (country && country.weather && country.weather.length > 0) {
     return (
       <div className="flex h-screen flex-col">
-        <button
-          className="w-1/4 self-center rounded-xl bg-red-500 p-10"
+        <img
+          src={homeLogo}
+          className="my-10 w-1/5 cursor-pointer self-center rounded-xl border-2 border-white p-5 hover:bg-white hover:bg-opacity-10 lg:w-24"
           onClick={() => navigate('/')}
-        >
-          🏠
-        </button>
+        ></img>
         <CountryStats
           name={country?.name}
           description={country?.weather[0].description}

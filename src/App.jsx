@@ -1,4 +1,4 @@
-import '../public/index.css';
+import '../index.css';
 import { createRoot } from 'react-dom/client';
 import Landing from './Landing.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

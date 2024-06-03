@@ -36,7 +36,7 @@ const SearchBar = () => {
           Submit
         </button>
       </form>
-      <section className="max-h-96 w-72 overflow-y-auto rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
+      <section className="max-h-80 w-72 overflow-y-auto rounded-lg border-2 border-b-0 border-gray-300 bg-slate-50">
         {inputText &&
           countries
             .filter((country) =>
