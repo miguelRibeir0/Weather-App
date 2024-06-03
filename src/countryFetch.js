@@ -7,4 +7,3 @@ const fetchWeather = async (country) => {
   return data;
 };
 export default fetchWeather;
-//
