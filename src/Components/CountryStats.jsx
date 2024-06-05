@@ -11,7 +11,7 @@ const CountryStats = ({
   return (
     <section className="m-auto flex w-72 flex-col justify-center text-center lg:mt-20 lg:w-2/6 lg:items-center lg:justify-start">
       <div>
-        <h1 className="rounded-t-lg border-2 border-white p-5 text-4xl font-bold uppercase text-white lg:w-fit lg:text-8xl">
+        <h1 className="rounded-t-lg border-2 border-white p-5 text-4xl font-bold uppercase text-white lg:w-fit lg:min-w-full lg:text-8xl">
           {name}
         </h1>
         <div className="flex w-full items-center justify-around border-b-2 border-white p-5 lg:border-2 lg:border-t-0 lg:py-7">
@@ -23,7 +23,7 @@ const CountryStats = ({
           <p className="h-full w-full border-b-2 border-white pb-5 text-3xl text-white lg:h-fit lg:w-fit lg:items-center lg:border-0 lg:pb-0">
             🌡️: {temp}°C
           </p>
-          <p className="text-3xl text-white">Feels like: {feels_like}°C</p>
+          <p className="ml-1 text-3xl text-white">Feels like: {feels_like}°C</p>
         </div>
         <div className="flex items-center justify-around border-b-2 border-white py-7 lg:justify-around lg:border-2 lg:border-t-0">
           <p className="text-3xl text-white">➖: {min}°C</p>
